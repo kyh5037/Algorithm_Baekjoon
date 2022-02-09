@@ -80,7 +80,7 @@ public class BOJ10217 {
                 if(dist[nextAirport.vertex][curAirport.cost + nextAirport.cost] > curAirport.weight + nextAirport.weight) {
                     dist[nextAirport.vertex][curAirport.cost + nextAirport.cost] = curAirport.weight + nextAirport.weight;
 
-                    pq.offer(new airport(nextAirport.vertex, curAirport.cost + nextAirport.cost, curAirport.weight + nextAirport.weight));
+                    pq.offer(new airport(nextAirport.vertex, curAirport.cost + nextAirport.cost, dist[nextAirport.vertex][curAirport.cost + nextAirport.cost]));
                 }
             }
         }
